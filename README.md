@@ -1,6 +1,7 @@
 # concepts-notes
 
-# List Comprehension
+# Haskell 
+## List Comprehension
 You can generate lists using list comprehension 
 
 ```haskell
@@ -28,7 +29,7 @@ One can also add a guard or a condition that must be fulfilled
 
 [(1,2),(1,3),(2,1),(2,3),(3,1),(3,2),(4,1),(4,2),(4,3)]
 ```
-# Some Data Structures in Haskell
+## Some Data Structures in Haskell
 Defining a Binary Tree
 ```haskell
 data BTree a = Null | TreeNode a (BTree a) (BTree a) deriving (Show, Eq)
@@ -80,3 +81,8 @@ mx (Node x Null) = x
 mx (Node x t) = if x > y then x else y   --returns the maximum value in the list
     where y = mx t
 ```
+
+-----------------------------------------------------
+# C
+
+
