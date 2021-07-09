@@ -84,7 +84,7 @@ mx (Node x t) = if x > y then x else y   --returns the maximum value in the list
 
 -----------------------------------------------------
 # C
-## Data Structures in Haskell
+## Data Structures in c
 Defining Node
 ```c
 
