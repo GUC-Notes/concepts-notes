@@ -84,5 +84,52 @@ mx (Node x t) = if x > y then x else y   --returns the maximum value in the list
 
 -----------------------------------------------------
 # C
+## Data Structures in Haskell
+Defining Node
+```c
 
+typedef struct Node{
+    int data;
+    struct Node* left;
+    struct Node* right;
+}Node;
 
+```
+-----------------------------------------------------
+
+creating new node
+```c
+Node* CreateNode(int data){
+    
+    // reserving block in memory to this node by using malloc
+    Node* pointer = (Node*)malloc(sizeof(Node)); 
+    // points to the starting address of the struct (node)
+     
+
+    (*pointer).data = data;
+    (*pointer).left = NULL;
+    (*pointer).right = NULL;
+    
+    // returning the address whichs points to the start address of the node
+    return pointer; 
+    
+}
+```
+
+-----------------------------------------------------
+
+deleting node
+```c
+void deleteNode(Node* p){
+    
+    if(p==NULL)return;
+    deleteNode((*p).left);
+    deleteNode((*p).right);
+    
+    // deallocates the memory previously allocated by a call to malloc.
+    free(p);
+    
+}
+
+```
+-----------------------------------------------------
